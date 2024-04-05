@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="sr.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+            // Disable the F12 key
+            document.addEventListener('keydown', function (event) {
+                if (event.keyCode === 123 || event.ctrlKey) {
+                    event.preventDefault();
+                }
+            });
+            document.addEventListener('contextmenu',event => event.preventDefault())
+            // Disable the Ctrl + Shift + I shortcut
+            document.addEventListener('keydown', function (event) {
+                if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
+                    event.preventDefault();
+                }
+            });
+        </script>
+        <div id="modal">
+    <h1>wrong answer</h1>
+    <h1 id="countdown">5</h1>
+</div>
+        <div class="q">
+            <center><p>
+    1. sisrtreo
+</p>
+
+            </center>
+
+        </div>
+        <div class="imgs">
+            
+
+    
+       <a onclick="wrongshow()"> <img src="./answers/img1.jpg" alt=""></a>
+    <a onclick="wrongshow()"> <img src="./answers/img2.jpg" alt=""></a>
+        <a onclick="wrongshow()"><img src="./answers/img3.jpg" alt=""></a>
+        <a onclick="wrongshow()"><img src="./answers/img4.jpg" alt=""></a>
+    <a href="./page2.html"> <img src="./answers/img5.jpg" alt=""></a>
+    <a onclick="wrongshow()"> <img src="./answers/img6.jpg" alt=""></a>
+    <a onclick="wrongshow()"> <img src="./answers/img7.jpg" alt=""></a>
+    <a onclick="wrongshow()">  <img src="./answers/img8.jpg" alt=""></a>
+    <a onclick="wrongshow()">  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ohms_law_voltage_source.svg/1200px-Ohms_law_voltage_source.svg.png" alt=""></a>
+    <a onclick="wrongshow()">  <img src="./answers/img10.jpg" alt=""></a>
+</div>
+
+
+        <script>
+            // script.js
+
+const modal = document.getElementById("modal");
+const countdownText = document.getElementById("countdown");
+modal.style.display='none'
+let count = 5;
+
+            function wrongshow() {
+                modal.style.display='block'
+                document.querySelector('body').style.backgroundColor= 'rgba(0, 0, 0, 0.74)'
+              const intervalId = setInterval(() => {
+                    count--;
+                    countdownText.textContent = count;
+                    if (count === 0) {
+                        clearInterval(intervalId);
+                        count = 5; // Reset counter
+                        countdownText.textContent = count; // Stop countdown after reaching 0
+                        modal.style.display='none'
+                    }
+                }, 1000); // Update every 1 second
+
+            }
+        </script>
+    </body>
+</html>

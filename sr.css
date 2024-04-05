@@ -1,0 +1,68 @@
+body {
+    background-image: url(./pexels-min-an-1353938.jpg);
+    background-position:center;
+    background-size: cover;
+    font-family: "Kalam", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+}
+
+
+.imgs {
+    display: flex;
+    margin: 90px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgb(18, 120, 35);
+    border-radius: 10px;
+transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+img:hover {
+cursor: pointer;
+transform: scale(1.5);
+filter: sepia(0.5);}
+center {
+    background-color: rgb(228, 255, 200);
+    margin: 30px;
+    height: 90px;
+}
+p{
+padding: 30px;
+}
+
+/* style.css */
+
+#modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(115, 228, 124, 0.515);
+    padding: 2000px;
+    border: 1px solid black;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

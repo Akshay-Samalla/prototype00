@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Number Submission</title>
+    <script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-database.js"></script>
+    <script>
+        // Replace these with your Firebase project configuration
+        const firebaseConfig = {
+            // ... your Firebase project configuration
+        };
+    </script>
+    <style>
+        /* Add any styling for the form and message element as desired */
+
+body {
+  font-family: sans-serif;
+  background-image: url(./pexels-min-an-1353938.jpg);
+  background-position: center;
+  background-size: cover;
+}
+button{
+  padding: 10px;
+  background-color: rgb(142, 253, 62);
+  border: 2px solid rgb(34, 255, 0);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border: 2px solid rgb(0, 147, 20);
+  background-color: rgba(9, 239, 28, 0.421);
+  padding: 300px;
+}
+
+#rollNumber {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#message {
+  font-weight: bold;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Roll Number Submission</h1>
+    <form id="roll-number-form">
+        <label for="rollNumber">Enter Roll Number:</label>
+        <input type="text" id="rollNumber" name="rollNumber" required>
+        <button type="button" onclick="btn()">Submit</button>
+    </form>
+    <p id="message"></p>
+
+    <script >
+      function btn (event) {
+        const date = new Date()
+        console.log(date.getTime())
+        console.log(date.getUTCMilliseconds())
+        alert('thank you')
+      }
+    </script>
+</body>
+
+</html>
